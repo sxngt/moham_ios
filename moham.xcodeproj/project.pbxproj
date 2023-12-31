@@ -82,8 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				4607B2752B41B50F005B3C9B /* Info.plist */,
-				4607B2702B41A463005B3C9B /* Model */,
-				4607B26F2B41A404005B3C9B /* View */,
+				46A9C9EF2B41DC2400EAD15C /* APIs */,
+				4607B2702B41A463005B3C9B /* Models */,
+				4607B26F2B41A404005B3C9B /* Views */,
 				4607B2612B41A3FB005B3C9B /* mohamApp.swift */,
 				4607B2652B41A3FC005B3C9B /* Assets.xcassets */,
 				46A9C9EC2B41C32600EAD15C /* Config.xcconfig */,
@@ -100,21 +101,44 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4607B26F2B41A404005B3C9B /* View */ = {
+		4607B26F2B41A404005B3C9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46A9C9EE2B41DBB900EAD15C /* Components */,
+				46A9C9ED2B41DB4100EAD15C /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4607B2702B41A463005B3C9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		46A9C9ED2B41DB4100EAD15C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				4607B2632B41A3FB005B3C9B /* ContentView.swift */,
 				4607B2712B41A4CA005B3C9B /* LaunchScreenView.swift */,
 				4607B2732B41ADE0005B3C9B /* LoginView.swift */,
 			);
-			path = View;
+			path = Screens;
 			sourceTree = "<group>";
 		};
-		4607B2702B41A463005B3C9B /* Model */ = {
+		46A9C9EE2B41DBB900EAD15C /* Components */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		46A9C9EF2B41DC2400EAD15C /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
