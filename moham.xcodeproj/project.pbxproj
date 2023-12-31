@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234C70C6FE6B10EB00E17583 /* Pods_moham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEEEB9F8434A40D3C82F92C /* Pods_moham.framework */; };
 		4607B2622B41A3FB005B3C9B /* mohamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607B2612B41A3FB005B3C9B /* mohamApp.swift */; };
 		4607B2642B41A3FB005B3C9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607B2632B41A3FB005B3C9B /* ContentView.swift */; };
 		4607B2662B41A3FC005B3C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4607B2652B41A3FC005B3C9B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1383A880C6E41A376721B90A /* Pods-moham.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moham.release.xcconfig"; path = "Target Support Files/Pods-moham/Pods-moham.release.xcconfig"; sourceTree = "<group>"; };
 		4607B25E2B41A3FB005B3C9B /* moham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4607B2612B41A3FB005B3C9B /* mohamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohamApp.swift; sourceTree = "<group>"; };
 		4607B2632B41A3FB005B3C9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +25,8 @@
 		4607B2682B41A3FC005B3C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4607B2712B41A4CA005B3C9B /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		4607B2732B41ADE0005B3C9B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9AEEEB9F8434A40D3C82F92C /* Pods_moham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E638105FC6A8E00DF239E3BD /* Pods-moham.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moham.debug.xcconfig"; path = "Target Support Files/Pods-moham/Pods-moham.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234C70C6FE6B10EB00E17583 /* Pods_moham.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,8 @@
 			children = (
 				4607B2602B41A3FB005B3C9B /* moham */,
 				4607B25F2B41A3FB005B3C9B /* Products */,
+				6965B80CE6484B96885A319A /* Pods */,
+				9B292E5E65AF18D321682F17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6965B80CE6484B96885A319A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E638105FC6A8E00DF239E3BD /* Pods-moham.debug.xcconfig */,
+				1383A880C6E41A376721B90A /* Pods-moham.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9B292E5E65AF18D321682F17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AEEEB9F8434A40D3C82F92C /* Pods_moham.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4607B26C2B41A3FC005B3C9B /* Build configuration list for PBXNativeTarget "moham" */;
 			buildPhases = (
+				617F7E66603C73633A9A08AE /* [CP] Check Pods Manifest.lock */,
 				4607B25A2B41A3FB005B3C9B /* Sources */,
 				4607B25B2B41A3FB005B3C9B /* Frameworks */,
 				4607B25C2B41A3FB005B3C9B /* Resources */,
+				0EB78099285084F1F11E74C3 /* [CP] Embed Pods Frameworks */,
+				1D8FF9926B083FF72AD47D7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +181,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB78099285084F1F11E74C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D8FF9926B083FF72AD47D7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moham/Pods-moham-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		617F7E66603C73633A9A08AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moham-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4607B25A2B41A3FB005B3C9B /* Sources */ = {
@@ -290,6 +377,7 @@
 		};
 		4607B26D2B41A3FC005B3C9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E638105FC6A8E00DF239E3BD /* Pods-moham.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,6 +407,7 @@
 		};
 		4607B26E2B41A3FC005B3C9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1383A880C6E41A376721B90A /* Pods-moham.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
