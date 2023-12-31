@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLoading: Bool = true
     var body: some View {
+        if isLoading {
+            LaunchScreenView()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                        isLoading.toggle()
+                    })
+                }
+        }
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
         }
         .padding()
     }
