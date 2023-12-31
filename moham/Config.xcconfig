@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  moham
+//
+//  Created by ysh on 1/1/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = 67f9726674b2a0a66140cc5cf49867d8

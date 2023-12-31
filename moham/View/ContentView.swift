@@ -10,17 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @State var isLoading: Bool = true
     var body: some View {
-        if isLoading {
-            LaunchScreenView()
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                        isLoading.toggle()
-                    })
-                }
+        ZStack {
+            LoginView()
+            if isLoading {
+                LaunchScreenView().transition(.opacity).zIndex(1.0)
+            }
         }
-        VStack {
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                withAnimation { isLoading.toggle()}
+            })
         }
-        .padding()
     }
 }
 
