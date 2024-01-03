@@ -9,6 +9,7 @@ import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKUser
 struct LoginView: View {
+    var kakaoAuthService = KakaoAuthService()
     var body: some View {
         VStack {
             Image(.logo)
@@ -18,16 +19,7 @@ struct LoginView: View {
                 .padding(.top, 100)
             Spacer()
             Button {
-                if (UserApi.isKakaoTalkLoginAvailable()) {
-                    UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
-                        if let error = error {
-                                    print(error)
-                                }
-                                else {
-                                    print(oauthToken?.accessToken)
-                                }
-                    }
-                }
+                kakaoAuthService.kakaoLoginGate()
             } label: {
                 Image(.kakaoLoginLargeNarrow)
                     .resizable()
