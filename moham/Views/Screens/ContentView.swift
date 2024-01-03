@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLoading: Bool = true
+    @State var showMainView: Bool = false
     var body: some View {
         ZStack {
-            LoginView()
-            if isLoading {
-                LaunchScreenView().transition(.opacity).zIndex(1.0)
+            if showMainView {
+                LoginView()
+            } else {
+                LaunchScreenView().transition(.opacity).zIndex(1.0) //스플래시 스크린
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                            withAnimation { showMainView.toggle()}
+                        })
+                    }
             }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                withAnimation { isLoading.toggle()}
-            })
         }
     }
 }

@@ -10,11 +10,13 @@ import SwiftUI
 struct LaunchScreenView: View {
     var body: some View {
         VStack {
-            Image(.logo)
+            Image(.logoFull)
                 .resizable()
-            .frame(width: 370, height: 340)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 370)
+                .background(Color.white)
         }
-        
+            
     }
 }
 

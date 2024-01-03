@@ -25,6 +25,7 @@
 		46A9C9E72B41C28200EAD15C /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = 46A9C9E62B41C28200EAD15C /* KakaoSDKTalk */; };
 		46A9C9E92B41C28200EAD15C /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = 46A9C9E82B41C28200EAD15C /* KakaoSDKTemplate */; };
 		46A9C9EB2B41C28200EAD15C /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 46A9C9EA2B41C28200EAD15C /* KakaoSDKUser */; };
+		46A9C9F12B41E56700EAD15C /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C9F02B41E56700EAD15C /* KakaoAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4607B2732B41ADE0005B3C9B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4607B2752B41B50F005B3C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46A9C9EC2B41C32600EAD15C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		46A9C9F02B41E56700EAD15C /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		46A9C9EF2B41DC2400EAD15C /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				46A9C9F02B41E56700EAD15C /* KakaoAuthService.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A9C9F12B41E56700EAD15C /* KakaoAuthService.swift in Sources */,
 				4607B2642B41A3FB005B3C9B /* ContentView.swift in Sources */,
 				4607B2622B41A3FB005B3C9B /* mohamApp.swift in Sources */,
 				4607B2742B41ADE0005B3C9B /* LoginView.swift in Sources */,
