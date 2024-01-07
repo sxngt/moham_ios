@@ -117,8 +117,16 @@
 		4607B2702B41A463005B3C9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				469C8E862B497D0200863B63 /* KakaoAuth */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		469C8E862B497D0200863B63 /* KakaoAuth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KakaoAuth;
 			sourceTree = "<group>";
 		};
 		46A9C9ED2B41DB4100EAD15C /* Screens */ = {

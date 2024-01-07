@@ -4,20 +4,7 @@ import KakaoSDKUser
 
 struct KakaoAuthService {
     var authService = AuthService()
-    func getAccessTokenInfo() {
-        UserApi.shared.accessTokenInfo {(accessTokenInfo, error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("accessTokenInfo() success.")
-                
-                //do something
-                _ = accessTokenInfo
-                authService.authenticateWithToken(token: accessTokenInfo)
-            }
-        }
-    }
+
     func loginWithKaKao() {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
@@ -26,6 +13,7 @@ struct KakaoAuthService {
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
+                    checkMyInfo()
                     
                     //do something
                     _ = oauthToken
@@ -39,15 +27,31 @@ struct KakaoAuthService {
             }
             else {
                 print("loginWithKakaoAccount() success.")
+                checkMyInfo()
                 
                 //do something
                 _ = oauthToken
             }
         }
     }
+    
+    func checkMyInfo() {
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+                
+                //do something
+                _ = user
+            }
+        }
+    }
+    
     func kakaoLoginGate() {
         if (AuthApi.hasToken()) {
-            UserApi.shared.accessTokenInfo { (_, error) in
+            UserApi.shared.accessTokenInfo { (accessTokenInfo, error) in
                 if let error = error {
                     if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
                         //로그인 필요
@@ -59,7 +63,8 @@ struct KakaoAuthService {
                 }
                 else {
                     print("기존 토큰 있다")
-                    getAccessTokenInfo()
+                    checkMyInfo()
+                    authService.authenticateWithToken(token: accessTokenInfo)
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨) 성공시 로그인 Pass
                 }
             }

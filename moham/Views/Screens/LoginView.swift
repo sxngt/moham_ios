@@ -10,6 +10,7 @@ import KakaoSDKCommon
 import KakaoSDKUser
 struct LoginView: View {
     var kakaoAuthService = KakaoAuthService()
+    
     var body: some View {
         VStack {
             Image(.logo)

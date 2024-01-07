@@ -6,9 +6,34 @@
 //
 
 import Foundation
+import Alamofire
 
 class AuthService {
+    let baseURL: URL = URL(string: "http://localhost:8000/")!
     func authenticateWithToken(token: Any) {
-        print("{₩\(token)나왔다 삐리삐리")
+        print("{₩\(token)으로 인증요청")
+        
+        let res:HTTPURLResponse? = AF.request(
+            baseURL.absoluteString,
+            method: .post,
+            parameters: [:],
+            encoding: JSONEncoding.default,
+            headers: [:]
+        )
+        .response
+        
+        print(res)
     }
+    func apiCallTest() {
+        let res:HTTPURLResponse? = AF.request(
+            baseURL.absoluteString,
+            method: .post,
+            parameters: [:],
+            encoding: JSONEncoding.default,
+            headers: [:]
+        )
+        .response
+        print(res)
+    }
+
 }
